@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>SB Admin 2 - Register</title>
+  <title>Registrar</title>
 
   <!-- Custom fonts for this template-->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -17,7 +17,8 @@
 
   <!-- Custom styles for this template-->
   <link href="css/sb-admin-2.min.css" rel="stylesheet">
-
+  <!-- API Google del captcha-->>
+  <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 
 <body class="bg-gradient-primary">
@@ -37,40 +38,64 @@
               <form class="user">
                 <div class="form-group row">
                   <div class="col-sm-6 mb-3 mb-sm-0">
-                    <input type="text" class="form-control form-control-user" id="exampleFirstName" placeholder="First Name">
+                    <input type="text" class="form-control form-control-user" id="exampleFirstName" placeholder="Nombres">
                   </div>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control form-control-user" id="exampleLastName" placeholder="Last Name">
+                    <input type="text" class="form-control form-control-user" id="exampleLastName" placeholder="Apellidos">
                   </div>
                 </div>
                 <div class="form-group">
-                  <input type="email" class="form-control form-control-user" id="exampleInputEmail" placeholder="Email Address">
+                  <input type="email" class="form-control form-control-user" id="exampleInputEmail" placeholder="Correo electrónico">
                 </div>
                 <div class="form-group row">
                   <div class="col-sm-6 mb-3 mb-sm-0">
-                    <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password">
+                    <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Contraseña">
                   </div>
                   <div class="col-sm-6">
-                    <input type="password" class="form-control form-control-user" id="exampleRepeatPassword" placeholder="Repeat Password">
+                    <input type="password" class="form-control form-control-user" id="exampleRepeatPassword" placeholder="Repertir Contraseña">
                   </div>
                 </div>
+                <div class="form-group row">
+                  <div class="col-sm-6 mb-3 mb-sm-0">
+                    <input type="text" class="form-control form-control-user" id="exampleFirstName" placeholder="Rut                                   12345678-k">
+                  </div>
+                  <div class="col-sm-6">
+                    <input type="text" class="form-control form-control-user" id="exampleLastName" placeholder="Fecha de Nacimiento        dd/mm/aaaa">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <!-- ComboBox -->>
+                  <form action="">
+                    <select name="ad" onchange="crearlink(this.form)">
+                      <option selected>-- Pregunta Secreta --</option>
+                      <option value="1.htm">Primera Mascota</option>
+                      <option value="2.htm">Lugar de Nacimiento</option>
+                      <option value="3.htm">Primer número de teléfono</option>
+                      <option value="3.htm">Video juego favorito</option>
+                    </select>
+                  </form>
+                  <div class="col-sm-6">
+                    <input type="text" class="form-control form-control-user" id="exampleLastName" placeholder="Respuesta">
+                  </div>
+                </div>  
+                <div class="g-recaptcha" data-sitekey="MIAPI"></div><br/><br/>
                 <a href="login.html" class="btn btn-primary btn-user btn-block">
-                  Register Account
+                  Registrar Cuenta
                 </a>
                 <hr>
                 <a href="index.html" class="btn btn-google btn-user btn-block">
-                  <i class="fab fa-google fa-fw"></i> Register with Google
+                  <i class="fab fa-google fa-fw"></i> Registrar con Google
                 </a>
                 <a href="index.html" class="btn btn-facebook btn-user btn-block">
-                  <i class="fab fa-facebook-f fa-fw"></i> Register with Facebook
+                  <i class="fab fa-facebook-f fa-fw"></i> Registrar con Facebook
                 </a>
               </form>
               <hr>
               <div class="text-center">
-                <a class="small" href="forgot-password.html">Forgot Password?</a>
+                <a class="small" href="forgot-password.html">Olvidaste la contraseña?</a>
               </div>
               <div class="text-center">
-                <a class="small" href="login.html">Already have an account? Login!</a>
+                <a class="small" href="login.html">Ya tienes una cuenta? Inicia Sesión!</a>
               </div>
             </div>
           </div>
