@@ -47,10 +47,10 @@
             <a class="nav-link js-scroll-trigger" href="#atencion">Atención al cliente</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href=" ">Dispositivos</a>
+            <a class="nav-link js-scroll-trigger" href="blank.html">Dispositivos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href=" ">Graficos</a>
+            <a class="nav-link js-scroll-trigger" href="graficas.html">Graficos</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="login.html">Salir</a>
@@ -223,6 +223,20 @@
     </div>
   </section>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   <!-- Atención al fking cliente-->
   <section class="page-section" id="atencion">
     <div class="container">
@@ -260,6 +274,51 @@
       </div>
     </div>
   </section>
+
+
+  <!-- Atención al fking cliente
+  <section class="page-section" id="graficos.">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading text-uppercase">Contáctanos</h2>
+          <h3 class="section-subheading text-muted">Jamás te abandonaremos.<br>Explora las distintas alternativas que ofrecemos para comunicarnos.<br>Nuestro compromiso contigo, eso lo primero.<br>Y no hay mejor forma de agradecer tu lealtad que disponer nuestra ayuda 24 / 7</h3>
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="col-md-4">
+          <span class="fa-stack fa-4x">
+            <i class="fas fa-stop fa-stack-2x text-primary"></i>
+            <i class="fas fa-phone-square fa-stack-1x fa-inverse"></i>
+          </span>
+          <h4 class="service-heading">Vía Teléfono</h4>
+          <p class="text-muted">Llamá a nuestras oficinas boludo, te atendemos re bien papá un dos tres cuatros cinco seis siete ochos 12344456666678888888</p>
+        </div>
+        <div class="col-md-4">
+          <span class="fa-stack fa-4x">
+            <i class="fas fa-stop fa-stack-2x text-primary"></i>
+            <i class="fas fa-at fa-stack-1x fa-inverse"></i>
+          </span>
+          <h4 class="service-heading">Correo Electrónico</h4>
+          <p class="text-muted">Eu boludinho no falha portuge, no preocupinho porque correinho apainha muito maniiiito</p>
+        </div>
+        <div class="col-md-4">
+          <span class="fa-stack fa-4x">
+            <i class="fas fa-stop fa-stack-2x text-primary"></i>
+            <i class="fas fa-hotel fa-stack-1x fa-inverse"></i>
+          </span>
+          <h4 class="service-heading">Visítanos</h4>
+          <p class="text-muted">Puedes visitarnos en nuestras instalaciones en la avenida siempre viva 123, oficina TuMare</p>
+        </div>
+      </div>
+    </div>
+  </section>-->
+
+
+
+
+
+
 
   <!-- Footer -->
   <footer class="footer">
@@ -476,10 +535,31 @@
       </div>
     </div>
   </div>
+  <canvas id="line-chart" width="400" height="400"></canvas>
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+   <!-- Bootstrap core JavaScript -->
+   <script src="vendor/jquery/jquery.min.js"></script>
+   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+     <script>
+         var ctx = document.getElementsByClassName("line-chart");
+         var chartGraph = new Chart(ctx, {
+             type: 'line',
+             data: {
+                 labels: ["Enero","Febrero","marzo","Abril","Mayo","Junio","Julio","Agosto","septiembre","Octubre","Noviembre","Diciembre"],
+                 datasets: [{
+                     label:"Energia Consumida dentro del hogar, medida en kilo-voltios- 2019",
+                     data: [500 ,100 ,50,140 ,200 ,150 ,600 ,140 ,80 ,120 ,150 ,50 ,102 ],
+                     borderWidth: 6,
+                     borderColor: 'rgba(77,166,253,0.85)',
+                     backgroundColor: 'transparet'
+                 }]
+             } 
+         });
+     </script>
 
   <!-- Plugin JavaScript -->
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
